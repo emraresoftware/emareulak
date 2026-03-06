@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Emare Ulak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 16px;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #202124;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        h1 {
+            font-size: 16px;
+            margin: 0;
+            color: #1a73e8;
+        }
+        
+        #status {
+            font-size: 12px;
+            margin-bottom: 12px;
+            padding: 8px;
+            background-color: #e8f0fe;
+            border-radius: 4px;
+            color: #1a73e8;
+        }
+        
+        .data-section {
+            margin-bottom: 16px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.1);
+        }
+        
+        .data-section h3 {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            color: #1a73e8;
+        }
+        
+        .data-section h4 {
+            margin: 0 0 4px 0;
+            font-size: 13px;
+            color: #5f6368;
+        }
+        
+        .data-section p {
+            margin: 4px 0;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #3c4043;
+        }
+        
+        .data-section a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        .data-section a:hover {
+            text-decoration: underline;
+        }
+        
+        #refreshBtn {
+            width: 100%;
+            padding: 8px 16px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        
+        #refreshBtn:hover {
+            background-color: #1765d1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Emare Ulak</h1>
+    </div>
+    
+    <div id="status">Sayfa yükleniyor...</div>
+    
+    <div id="data-container">
+        <!-- Veriler buraya eklenecek -->
+    </div>
+    
+    <button id="refreshBtn">Yenile</button>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

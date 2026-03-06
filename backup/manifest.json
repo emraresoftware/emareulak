@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Emare Ulak",
+  "version": "1.0",
+  "description": "Web sayfalarındaki tüm verileri otomatik olarak toplar ve analiz eder",
+  "icons": {
+    "48": "icons/emare-ulak-icon-48.png",
+    "128": "icons/emare-ulak-icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs",
+    "webNavigation",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "Emare Ulak",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "*.html", "*.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
