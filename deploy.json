@@ -1,0 +1,22 @@
+{
+  "slug": "emareulak",
+  "name": "Emare Ulak",
+  "github_repo": "emraresoftware/emareulak",
+  "branch": "main",
+  "dc": "local",
+  "server_host": null,
+  "server_ssh_port": 22,
+  "remote_path": "/opt/emareulak",
+  "stack": "python-gunicorn",
+  "port": 8319,
+  "domain": "",
+  "deploy_commands": [
+    "cd /opt/emareulak",
+    "git pull origin main",
+    "source venv/bin/activate && pip install -r requirements.txt -q",
+    "sudo systemctl restart emareulak"
+  ],
+  "restart_command": "systemctl status emareulak --no-pager",
+  "auto_deploy_on_push": false,
+  "health_check_url": null
+}
